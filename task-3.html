@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New User with Axios</title>
+    <!-- Include the Axios library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Add a link to a dummy favicon to avoid 404 error -->
+    <link rel="icon" href="data:;base64,=">
+</head>
+<body>
+    <script>
+        /**
+         * Function to send an HTTP POST request to create a new user on the JSONPlaceholder API using Axios.
+         */
+        async function createUserWithAxios() {
+            try {
+                // Data for the new user
+                const userData = {
+                    name: "Imeuswe App",
+                    email: "imeuswe@example.com"
+                };
+
+                // Make an HTTP POST request to create a new user using Axios
+                const response = await axios.post('https://jsonplaceholder.typicode.com/users', userData);
+                
+                // Log the response data to the console
+                console.log(response.data);
+            } catch (error) {
+                // Log any errors to the console
+                console.error('Error creating the user:', error);
+            }
+        }
+
+        // Call the function to create a new user
+        createUserWithAxios();
+    </script>
+</body>
+</html>

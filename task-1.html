@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fetch Example</title>
+    <link rel="icon" href="data:;base64,=">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        async function fetchPosts() {
+            try {
+                // Make HTTP GET request using axios
+                const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+                
+                console.log(response.data);
+            } catch (error) {
+                // Log any errors to the console
+                console.error('Error fetching posts:', error);
+            }
+        }
+
+        // Call the function to fetch and log the posts
+        fetchPosts();
+    </script>
+</body>
+</html>
