@@ -4,55 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch Specific Post with Axios and Condition</title>
-    <!-- Include the Axios library from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- Add a link to a dummy favicon to avoid 404 error -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Include the Axios library from CDN -->
     <link rel="icon" href="data:;base64,=">
 </head>
 <body>
     <script>
-        /**
-         * Function to fetch all posts from JSONPlaceholder API using Axios,
-         * check for a specific post with an ID of 5, and log the result to the console.
-         */
-        async function fetchAndFindSpecificPost() {
+        async function findSpecificPost() {
             try {
-                // Make an HTTP GET request to the API to fetch all posts
-                const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+                const response = await axios.get('https://jsonplaceholder.typicode.com/posts'); // Make HTTP GET request using axios
                 
-                // Get the posts data from the response
-                const posts = response.data;
-
-                // Initialize a variable to store the specific post
-                let specificPost = null;
-
-                // Loop through all the posts
+                const posts = response.data; // Get the posts data from the response
+                let specificPost = null;  // Initialize a variable to store the specific post
                 for (let i = 0; i < posts.length; i++) {
-                    // Check if the current post's ID is 5
-                    if (posts[i].id === 5) {
+                    if (posts[i].id === 5) { // Check if the current post's ID is 5
                         // If it is, store the post in the specificPost variable
                         specificPost = posts[i];
                         // Break the loop since we found the post
                         break;
                     }
                 }
-
                 // Check if the specific post is found
                 if (specificPost) {
-                    // Log the specific post to the console
-                    console.log(specificPost);
+                    console.log(specificPost); // Log the specific post to the console
                 } else {
-                    // Log a message if the post with ID 5 is not found
-                    console.log('Post with ID 5 not found');
+                    console.log('Post with ID 5 not found');  // Log a message if the post with ID 5 is not found
                 }
             } catch (error) {
-                // Log any errors to the console
                 console.error('Error fetching the posts:', error);
             }
         }
-
-        // Call the function to fetch and find the specific post
-        fetchAndFindSpecificPost();
+        findSpecificPost(); // Call the function
     </script>
 </body>
 </html>
