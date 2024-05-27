@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .signup-form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .signup-form input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .signup-form input:focus{
+            outline-color: #28a745;
+        }
+        .signup-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-form">
+        <h2>Signup Form</h2>
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Signup</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <!-- Load Axios library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
