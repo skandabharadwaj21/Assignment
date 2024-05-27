@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New User with Axios</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="icon" href="data:;base64,=">
-</head>
-<body>
-    <script>
+const axios = require('axios')
         async function createUser() {
             try {
                 // Data for the new user
@@ -24,7 +14,5 @@
                 console.error('Error creating the user:', error);  // Log any errors to the console
             }
         }
-        createUser();  // Call the function
-    </script>
-</body>
-</html>
+
+createUser();  // Call the function
