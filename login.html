@@ -12,17 +12,20 @@
         <div class="card" id="login-card">
             <div class="card-login">
                 <h3 id="login-header">Login</h3>
-                <form class="login-form" onsubmit="return false;">
+                <form class="login-form" id="loginform" onsubmit="return false;">
                     <input type="email" id="email" placeholder="Email">
                     <input type="password" id="password" placeholder="Password">
                     <a href="#" id="forgot-password">Forgot Password?</a>
                     <button type="button" id="login-btn" >Login</button>
                 </form>
                 <p style="margin-top: -2px; color: #fff;">Don't have an account? <a href="signup.html" id="signup-link" style="color: #fff;">Sign up here</a></p>
+                <p id="message" style="color: red;"></p>
             </div>
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
 

@@ -69,7 +69,7 @@ app.post("/story", async function (req, res) {
       const { id } = req.query;
       const story = await stories.findByIdAndDelete(id);
         if (!story) {
-        return res.status(404).json({ message: "cannot find product by id" });
+        return res.status(404).json({ message: "cannot find story by id" });
       } else {
         res.status(200).json(story);
       }

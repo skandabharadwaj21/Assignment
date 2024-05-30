@@ -18,12 +18,12 @@
     .container {
        margin: auto;
        margin-right: 38%;
-       margin-top: 80px;
+       margin-top: 40px;
     }
 
     .card {
         width: 400px;
-        height: 450px;
+        height: 550px;
         position: relative;
     }
 
@@ -65,7 +65,7 @@
     }
 
     input {
-        padding: 15px;
+        padding: 10px;
         margin-bottom: 35px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -109,18 +109,23 @@
         <div class="card" id="login-card">
             <div class="card-signup">
                 
-                <form class="signup-form">
+                <form class="signup-form" id="signupform">
                     <h3 id="signup-header">Sign Up</h3>
                     <input type="email" id="new-email" placeholder="Email">
+                    <input type="text" id="firstName" placeholder="First name">
+                    <input type="text" id="lastName" placeholder="Last name">
                     <input type="password" id="new-password" placeholder="Password">
                     <input type="password" id="confirm-password" placeholder="Confirm Password">
                     <button type="button" id="signup-btn">Sign Up</button>
+                    <p id="message" style="color: red;"></p>
                 </form>
-                <p style="margin-top: 24px; color: #fff;">Already have an account? <a href="login.html" id="login-link" style="color: #fff;">Login here</a></p>
+                <p style="margin-top: -5px; color: #fff;">Already have an account? <a href="login.html" id="login-link" style="color: #fff;">Login here</a></p>
             </div>
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="signup.js"></script>
 </body>
 </html>
 

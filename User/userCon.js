@@ -1,12 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const path = require('path')
 const userDet = require('./userModel')
 const app = express()
 
 app.use(express.json())
 
+app.use(express.static(path.join(__dirname, '../')));
+
 app.get('/', async function(req, res){
-    res.send('Api working.')
+    res.sendFile(path.join(__dirname, '../signup.html'));
 });
 
 app.post('/userCreation', async function(req, res) {
